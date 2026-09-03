@@ -1,0 +1,24 @@
+    <section class="footer-cta-section">
+      <div class="wrap">
+        <div class="footer-cta">
+          <div>
+            <h3>عضو خبرنامه آنجل بیوتی شوید</h3>
+            <p>
+              تخفیف‌های ویژه و مقالات مراقبت پوست و مو، زودتر از همه در ایمیل
+              شما.
+            </p>
+          </div>
+          <form
+            class="newsletter-form"
+            onsubmit="
+              event.preventDefault();
+              showToast('عضویت شما ثبت شد');
+              this.reset();
+            "
+          >
+            <input type="email" placeholder="ایمیل شما" required />
+            <button type="submit">عضویت</button>
+          </form>
+        </div>
+      </div>
+    </section>
