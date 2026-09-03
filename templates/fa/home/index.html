@@ -1,0 +1,71 @@
+{% extends 'fa/base/default.html' %}
+{% load static %}
+
+    {% block meta %}
+      
+    {% endblock meta %}
+      
+
+    {% block title %}
+      Angel Beauty | سالن زیبایی آنجل
+    {% endblock title %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  
+      
+    {% block style %}
+      <link rel="stylesheet" href="{% static 'css/home/style.css' %}" />
+    {% endblock style %}
+      
+
+    {% block body %}
+      
+   
+
+    {% include 'fa/home/section/hero.html' %}
+
+    
+    {% include 'fa/home/section/services.html' %}
+    
+    {% include 'fa/home/section/philosophy.html' %}
+      
+    {% include 'fa/home/section/testimonials.html' %}
+        
+    {% include 'fa/home/section/hours.html' %}
+
+    
+    <!-- <section>
+      <div class="wrap">
+        <div class="cta-band">
+          <div>
+            <h2>آماده‌اید نوبتتان را رزرو کنید؟</h2>
+            <p>
+              در کمتر از دو دقیقه، خدمت، متخصص و زمان دلخواهتان را انتخاب کنید.
+            </p>
+          </div>
+          <a href="booking.html" class="btn-primary">شروع رزرو</a>
+        </div>
+      </div>
+    </section> -->
+
+    
+    {% include 'fa/home/section/footer-cta-section.html' %}
+    {% endblock body %}
+  
+
+    {% block script %}
+          <script>
+            // Duplicate the testimonial cards once for a seamless infinite marquee loop.
+            (() => {
+              const track = document.getElementById('quoteMarquee');
+              if (track) track.innerHTML += track.innerHTML;
+            })();
+          </script>
+    {% endblock script %}
+  
+
+
+

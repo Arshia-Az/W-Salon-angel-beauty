@@ -1,0 +1,46 @@
+{% load static %}
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% block meta %}{% endblock meta %}
+
+
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    {% block style %}
+    {% endblock style %}
+        
+  </head>
+  <body>
+
+    {% include 'fa/base/Header/header_component.html' %}
+
+    
+    {% block body %}
+    {% endblock body %}
+
+        
+    {% include 'fa/base/Footer/footer_component.html' %}
+
+    {% include 'fa/base/soicalMedia_button.html' %}
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block script %}
+    {% endblock script %}
+            
+
+  </body>
+</html>
